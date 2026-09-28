@@ -24,45 +24,65 @@ const nextConfig: NextConfig = {
       // Article 1: Speed requirements
       {
         source: "/blog/iptv-internet-speed-requirements",
-        destination: "/blog/iptv-speed-requirements-guide",
+        destination: "/blog/iptv-internet-speed-guide",
         permanent: true,
       },
       {
         source: "/blog/internet-speed-for-iptv",
-        destination: "/blog/iptv-speed-requirements-guide",
+        destination: "/blog/iptv-internet-speed-guide",
+        permanent: true,
+      },
+      {
+        source: "/blog/iptv-speed-requirements-guide",
+        destination: "/blog/iptv-internet-speed-guide",
         permanent: true,
       },
       // Article 2: Firestick apps
       {
         source: "/blog/best-iptv-players-firestick",
-        destination: "/blog/best-iptv-apps-firestick",
+        destination: "/blog/best-firestick-iptv-apps",
         permanent: true,
       },
       {
         source: "/blog/best-iptv-apps-firestick-2026",
-        destination: "/blog/best-iptv-apps-firestick",
+        destination: "/blog/best-firestick-iptv-apps",
+        permanent: true,
+      },
+      {
+        source: "/blog/best-iptv-apps-firestick",
+        destination: "/blog/best-firestick-iptv-apps",
         permanent: true,
       },
       // Article 3: Smart TV apps
       {
-        source: "/blog/best-smart-tv-iptv-apps",
-        destination: "/blog/best-smart-tv-iptv-players",
+        source: "/blog/best-smart-tv-iptv-players",
+        destination: "/blog/best-smart-tv-iptv-apps",
         permanent: true,
       },
       {
         source: "/blog/best-iptv-apps-smart-tv-2026",
-        destination: "/blog/best-smart-tv-iptv-players",
+        destination: "/blog/best-smart-tv-iptv-apps",
+        permanent: true,
+      },
+      {
+        source: "/blog/best-iptv-apps-smart-tv",
+        destination: "/blog/best-smart-tv-iptv-apps",
         permanent: true,
       },
       // Article 4: Troubleshooting
       {
         source: "/blog/fix-iptv-not-working-troubleshooting",
-        destination: "/blog/how-to-fix-iptv-not-working",
+        destination: "/blog/fix-iptv-not-working-guide",
         permanent: true,
       },
       {
         source: "/blog/iptv-not-working-2026",
-        destination: "/blog/how-to-fix-iptv-not-working",
+        destination: "/blog/fix-iptv-not-working-guide",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-fix-iptv-not-working",
+        destination: "/blog/fix-iptv-not-working-guide",
         permanent: true,
       },
     ];

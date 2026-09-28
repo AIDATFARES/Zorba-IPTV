@@ -92,6 +92,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     })),
   } : null;
 
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   const markdownComponents = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     h2: ({ node, ...props }: any) => <h2 className="text-2xl sm:text-3xl font-black mt-12 mb-6 text-[#171717]" {...props} />,
@@ -118,12 +119,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     img: ({ node, alt, src, ...props }: any) => (
       <span className="my-8 flex flex-col items-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={src} alt={alt} className="rounded-xl max-w-full shadow-md border border-[#E4E5E1]" {...props} />
         {alt && <span className="text-xs text-center block mt-2 text-[#626262]">{alt}</span>}
       </span>
     ),
     cta: () => <div className="not-prose my-12"><BlogOfferCard /></div>,
   };
+  /* eslint-enable @typescript-eslint/no-unused-vars */
 
   return (
     <main className="flex-grow pt-28 pb-24 px-5 sm:px-8 max-w-[1024px] mx-auto w-full relative z-10 bg-[#F5F6F3] text-[#171717] overflow-hidden">
