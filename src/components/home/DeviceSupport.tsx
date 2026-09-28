@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Tv, Flame, Smartphone, Laptop, Monitor, Tablet, HardDrive, Globe, Check, ArrowRight } from "lucide-react";
+import { Tv, Flame, Smartphone, Laptop, Monitor, HardDrive, Check, ArrowRight } from "lucide-react";
 
 export default function DeviceSupport() {
   const devices = [
@@ -12,19 +12,19 @@ export default function DeviceSupport() {
   ];
 
   return (
-    <section id="devices" className="py-24 relative z-10 border-t border-amber-500/10 bg-[#07080C]/80">
+    <section id="devices" className="py-24 relative z-10 border-t border-[#E4E5E1] bg-[#F8F8F5]">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/25 mb-4 shadow-[0_0_15px_rgba(245,158,11,0.15)]">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-[#F28C18]/10 text-[#F28C18] border border-[#F28C18]/25 mb-4 shadow-[0_2px_12px_rgba(242,140,24,0.1)]">
             <span>UNIVERSAL IPTV COMPATIBILITY</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#F8FAFC]">
-            Watch Smootv on <span className="bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent">Any Device</span>
+          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#171717]">
+            Watch Zorba IPTV on <span className="bg-gradient-to-r from-[#F28C18] via-[#F7A034] to-[#DF790E] bg-clip-text text-transparent">Any Device</span>
           </h2>
-          <p className="text-[#CBD5E1] text-base sm:text-lg mt-4">
-            Smootv works seamlessly across all major operating systems, smart televisions, Firestick, and third-party IPTV player apps. View our detailed <Link href="/installation" className="text-amber-400 hover:underline font-semibold">IPTV Installation Tutorials</Link>.
+          <p className="text-[#626262] text-base sm:text-lg mt-4">
+            Zorba IPTV works seamlessly across all major operating systems, smart televisions, Firestick, and third-party IPTV player apps. View our detailed <Link href="/installation" className="text-[#F28C18] hover:underline font-semibold">IPTV Installation Tutorials</Link>.
           </p>
         </div>
 
@@ -35,35 +35,35 @@ export default function DeviceSupport() {
             return (
               <div
                 key={idx}
-                className="smootv-card p-6 rounded-2xl flex flex-col justify-between group"
+                className="zorba-card p-6 rounded-2xl flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 to-yellow-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-105 transition-transform shadow-[0_0_12px_rgba(245,158,11,0.15)]">
+                    <div className="w-12 h-12 rounded-xl bg-[#FEF7ED] border border-[#F28C18]/30 flex items-center justify-center text-[#F28C18] group-hover:scale-105 transition-transform shadow-xs">
                       <IconComponent className="w-6 h-6" />
                     </div>
-                    <span className="text-[10px] font-extrabold bg-amber-500/10 text-amber-300 border border-amber-500/25 px-2.5 py-1 rounded-full">
+                    <span className="text-[10px] font-extrabold bg-[#F28C18]/10 text-[#F28C18] border border-[#F28C18]/25 px-2.5 py-1 rounded-full">
                       {dev.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#F8FAFC] mb-2 group-hover:text-amber-300 transition-colors">
+                  <h3 className="text-xl font-bold text-[#171717] mb-2 group-hover:text-[#F28C18] transition-colors">
                     {dev.name}
                   </h3>
 
-                  <p className="text-sm text-[#CBD5E1] leading-relaxed">
+                  <p className="text-sm text-[#626262] leading-relaxed">
                     {dev.desc}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-semibold text-emerald-400">
+                <div className="mt-6 pt-4 border-t border-[#E2D7CC] flex items-center justify-between text-xs font-semibold text-emerald-700">
                   <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-emerald-400" />
+                    <Check className="w-4 h-4 text-emerald-600" />
                     <span>Tested 100% Buffer-Free</span>
                   </div>
                   <Link
                     href="/installation"
-                    className="text-amber-400 hover:text-amber-300 font-bold transition-colors"
+                    className="text-[#F28C18] hover:text-[#DF790E] font-bold transition-colors"
                   >
                     Setup Guide →
                   </Link>
@@ -76,7 +76,7 @@ export default function DeviceSupport() {
         <div className="mt-12 text-center">
           <Link
             href="/installation"
-            className="btn-primary-smootv px-8 py-3.5 text-xs font-extrabold uppercase tracking-wider inline-flex items-center gap-2"
+            className="btn-primary-zorba px-8 py-3.5 text-xs font-extrabold uppercase tracking-wider inline-flex items-center gap-2"
           >
             <span>Open All Installation Tutorials</span>
             <ArrowRight className="w-4 h-4" />

@@ -26,8 +26,6 @@ export default function BrandMarquee({
 
   return (
     <div className="w-full overflow-hidden bg-transparent py-6 relative flex items-center">
-      {/* Left/Right Gradient Masks removed per user request */}
-      
       {/* The scrolling container */}
       <div
         className={`flex gap-6 md:gap-8 px-6 items-center w-max ${brandList.length < 10 ? 'animate-marquee-fast' : 'animate-marquee'}`}
@@ -35,7 +33,7 @@ export default function BrandMarquee({
         {repeatList.map((brand, i) => (
           <div 
             key={i} 
-            className={cardClassName || "flex-shrink-0 w-[100px] h-[50px] md:w-[140px] md:h-[65px] relative bg-white border border-amber-500/20 rounded-xl p-3 hover:border-amber-500/50 hover:shadow-[0_0_20px_rgba(245,158,11,0.2)] hover:scale-105 transition-all duration-300 shadow-sm"}
+            className={cardClassName || "flex-shrink-0 w-[100px] h-[50px] md:w-[140px] md:h-[65px] relative bg-[#EFE8E0] border border-[#E2D7CC] rounded-xl p-3 hover:border-[#F28C18]/50 hover:shadow-[0_4px_16px_rgba(242,140,24,0.15)] hover:scale-105 transition-all duration-300 shadow-xs"}
           >
             <div className="relative w-full h-full overflow-hidden rounded-xl">
               <Image 

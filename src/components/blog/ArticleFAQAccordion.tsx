@@ -25,22 +25,22 @@ export default function ArticleFAQAccordion({ faqs }: { faqs: FAQItem[] }) {
         return (
           <div
             key={index}
-            className="rounded-xl border border-white/10 bg-[#0B0D14] overflow-hidden transition-all duration-300 hover:border-amber-500/40 shadow-lg"
+            className="rounded-xl border border-[#E2D7CC] bg-[#EFE8E0] overflow-hidden transition-all duration-300 hover:border-[#F28C18]/40 shadow-xs"
           >
             <button
               onClick={() => toggle(index)}
-              className="w-full px-6 py-4 flex items-center justify-between text-left gap-4 bg-[#0E121D]/80 hover:bg-[#0B0D14] transition-colors cursor-pointer"
+              className="w-full px-6 py-4 flex items-center justify-between text-left gap-4 bg-[#EFE8E0] hover:bg-[#ECE3D9] transition-colors cursor-pointer"
               aria-expanded={isOpen}
             >
               <div className="flex items-center gap-3">
-                <HelpCircle className="w-5 h-5 text-amber-400 shrink-0" />
-                <span className="font-bold text-base sm:text-lg text-white">
+                <HelpCircle className="w-5 h-5 text-[#F28C18] shrink-0" />
+                <span className="font-bold text-base sm:text-lg text-[#171717]">
                   {faq.question}
                 </span>
               </div>
               <ChevronDown
-                className={`w-5 h-5 text-gray-400 transition-transform duration-300 shrink-0 ${
-                  isOpen ? "rotate-180 text-amber-400" : ""
+                className={`w-5 h-5 text-[#626262] transition-transform duration-300 shrink-0 ${
+                  isOpen ? "rotate-180 text-[#F28C18]" : ""
                 }`}
               />
             </button>
@@ -53,7 +53,7 @@ export default function ArticleFAQAccordion({ faqs }: { faqs: FAQItem[] }) {
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
-                  <div className="px-6 py-5 text-[#CBD5E1] text-sm sm:text-base leading-relaxed bg-[#0B0D14] border-t border-white/5">
+                  <div className="px-6 py-5 text-[#626262] text-sm sm:text-base leading-relaxed bg-[#FAF6F1] border-t border-[#E2D7CC]">
                     {faq.answer}
                   </div>
                 </motion.div>

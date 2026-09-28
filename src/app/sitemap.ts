@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { blogPosts } from '@/data/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.smootv.top';
+  const baseUrl = 'https://www.zorba-iptv.store';
 
   // Define static routes
   const staticRoutes: MetadataRoute.Sitemap = [

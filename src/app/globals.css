@@ -1,28 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-main: #07080C;
-  --color-bg-secondary: #0D0F17;
-  --color-card: #11141E;
-  --color-card-elevated: #161A27;
+  --color-bg-main: #F5F6F3;
+  --color-bg-secondary: #F8F8F5;
+  --color-bg-white: #FFFFFF;
+  --color-card: #EFE8E0;
+  --color-card-elevated: #ECE3D9;
   
-  --color-primary-gold: #F59E0B;
-  --color-champagne: #FDE047;
-  --color-gold-accent: #EAB308;
-  --color-amber-accent: #D97706;
-  --color-bronze: #92400E;
+  --color-primary-orange: #F28C18;
+  --color-secondary-gold: #F7A034;
+  --color-accent-amber: #DF790E;
+  --color-accent-light: #FEF7ED;
 
-  --color-text-primary: #F8FAFC;
-  --color-text-secondary: #CBD5E1;
-  --color-text-muted: #8E98A8;
+  --color-border-main: #E4E5E1;
+  --color-border-card: #E2D7CC;
+
+  --color-text-primary: #171717;
+  --color-text-secondary: #626262;
+  --color-text-muted: #8E8E8A;
 
   --font-inter: var(--font-inter);
 }
 
 @layer base {
   body {
-    background-color: #07080C;
-    color: #F8FAFC;
+    background-color: #F5F6F3;
+    color: #171717;
     font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
@@ -30,122 +33,199 @@
   }
 }
 
-/* Atmospheric Global Lighting and Luxury Onyx Grid Background */
+/* Atmospheric Global Lighting: Soft Stone + Warm Orange Glow + Geometric Line Pattern */
 .global-grid-bg {
-  background-color: #07080C;
+  background-color: #F5F6F3;
   background-image: 
-    radial-gradient(circle at 10% 12%, rgba(245, 158, 11, 0.16), transparent 32%),
-    radial-gradient(circle at 50% 60%, rgba(234, 179, 8, 0.08), transparent 30%),
-    radial-gradient(circle at 90% 28%, rgba(217, 119, 6, 0.18), transparent 32%),
-    linear-gradient(rgba(245, 158, 11, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245, 158, 11, 0.02) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 50px 50px, 50px 50px;
+    radial-gradient(circle at 14% 8%, rgba(242, 140, 24, 0.075), transparent 44%),
+    radial-gradient(circle at 86% 24%, rgba(242, 140, 24, 0.06), transparent 48%),
+    radial-gradient(circle at 50% 64%, rgba(242, 140, 24, 0.05), transparent 52%),
+    linear-gradient(rgba(23, 23, 23, 0.032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 23, 23, 0.032) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
 }
 
 @media (max-width: 1024px) {
   .global-grid-bg {
-    background-size: 100% 100%, 100% 100%, 100% 100%, 45px 45px, 45px 45px;
+    background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
   }
 }
 
 @media (max-width: 640px) {
   .global-grid-bg {
     background-image: 
-      radial-gradient(circle at 10% 12%, rgba(245, 158, 11, 0.12), transparent 35%),
-      radial-gradient(circle at 50% 55%, rgba(234, 179, 8, 0.06), transparent 35%),
-      radial-gradient(circle at 90% 28%, rgba(217, 119, 6, 0.12), transparent 35%),
-      linear-gradient(rgba(245, 158, 11, 0.015) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(245, 158, 11, 0.015) 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 100% 100%, 35px 35px, 35px 35px;
+      radial-gradient(circle at 12% 10%, rgba(242, 140, 24, 0.07), transparent 40%),
+      radial-gradient(circle at 50% 55%, rgba(242, 140, 24, 0.05), transparent 42%),
+      radial-gradient(circle at 88% 28%, rgba(242, 140, 24, 0.055), transparent 42%),
+      linear-gradient(rgba(23, 23, 23, 0.028) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23, 23, 23, 0.028) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 32px 32px, 32px 32px;
   }
 }
 
-/* Card Styling Utilities */
-.strimo-card,
-.smootv-card {
-  background-color: #11141E;
-  border: 1px solid rgba(245, 158, 11, 0.12);
+/* Subtle Geometric Grid Overlay for Sections */
+.subtle-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(23, 23, 23, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 23, 23, 0.028) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Card Styling Utilities - Warm Soft Brown / Mocha Cream */
+.zorba-card {
+  background-color: #EFE8E0;
+  border: 1px solid #E2D7CC;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 8px 24px -4px rgba(45, 30, 20, 0.06);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.strimo-card:hover,
-.smootv-card:hover {
-  background-color: #161A27;
-  border-color: rgba(245, 158, 11, 0.4);
-  box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.22);
+.zorba-card:hover {
+  background-color: #ECE3D9;
+  border-color: rgba(242, 140, 24, 0.5);
+  box-shadow: 0 12px 32px -4px rgba(242, 140, 24, 0.15), 0 4px 12px rgba(45, 30, 20, 0.06);
 }
 
 /* Featured Plan Card Glow */
-.strimo-featured-card,
-.smootv-featured-card {
-  background: linear-gradient(180deg, #181C2A 0%, #11141E 100%);
-  border: 1px solid rgba(245, 158, 11, 0.5);
-  box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.3), 0 0 15px -3px rgba(217, 119, 6, 0.4);
+.zorba-featured-card {
+  background: #EFE8E0;
+  border: 2px solid #F28C18;
+  box-shadow: 0 12px 36px -5px rgba(242, 140, 24, 0.28), 0 0 24px rgba(242, 140, 24, 0.12);
 }
 
 /* Base Buttons */
-.btn-primary-strimo,
-.btn-primary-smootv {
+.btn-primary-zorba {
   position: relative;
-  background: linear-gradient(90deg, #F59E0B 0%, #FBBF24 50%, #D97706 100%);
-  color: #07080C;
+  background: linear-gradient(135deg, #F28C18 0%, #F7A034 50%, #DF790E 100%);
+  color: #FFFFFF;
   font-weight: 800;
   border-radius: 9999px;
-  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 4px 20px rgba(242, 140, 24, 0.35);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }
 
-.btn-primary-strimo:hover,
-.btn-primary-smootv:hover {
-  box-shadow: 0 6px 30px rgba(245, 158, 11, 0.65), 0 0 15px rgba(251, 191, 36, 0.5);
+.btn-primary-zorba:hover {
+  box-shadow: 0 8px 28px rgba(242, 140, 24, 0.5), 0 0 16px rgba(247, 160, 52, 0.35);
   transform: translateY(-2px) scale(1.02);
 }
 
-.btn-secondary-strimo,
-.btn-secondary-smootv {
+.btn-secondary-zorba {
   position: relative;
-  background: rgba(17, 20, 30, 0.85);
-  border: 1px solid rgba(245, 158, 11, 0.25);
-  color: #F8FAFC;
+  background: #FFFFFF;
+  border: 1px solid #DCD1C4;
+  color: #171717;
   font-weight: 700;
   border-radius: 9999px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(8px);
 }
 
-.btn-secondary-strimo:hover,
-.btn-secondary-smootv:hover {
-  border-color: rgba(245, 158, 11, 0.6);
-  color: #FDE047;
-  background: rgba(245, 158, 11, 0.12);
-  box-shadow: 0 0 20px rgba(245, 158, 11, 0.25);
+.btn-secondary-zorba:hover {
+  border-color: #F28C18;
+  color: #F28C18;
+  background: #FEF7ED;
+  box-shadow: 0 4px 18px rgba(242, 140, 24, 0.14);
   transform: translateY(-2px) scale(1.02);
 }
 
 /* Keyframe Animations for Hero Buttons */
 @keyframes shimmer-sweep {
   0% {
-    transform: translateX(-120%) skewX(-20deg);
+    transform: translateX(-150%) skewX(-25deg);
   }
-  50%, 100% {
-    transform: translateX(200%) skewX(-20deg);
+  30%, 100% {
+    transform: translateX(250%) skewX(-25deg);
   }
 }
 
-@keyframes pulse-ring {
+@keyframes hero-primary-pulse {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(242, 140, 24, 0.38), 0 0 0 0 rgba(242, 140, 24, 0.45);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(242, 140, 24, 0.65), 0 0 24px 6px rgba(242, 140, 24, 0.35), 0 0 0 8px rgba(242, 140, 24, 0);
+    transform: scale(1.025);
+  }
+}
+
+@keyframes hero-secondary-float {
+  0%, 100% {
+    transform: translateY(0);
+    border-color: #DCD1C4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+  50% {
+    transform: translateY(-2px);
+    border-color: rgba(242, 140, 24, 0.65);
+    box-shadow: 0 8px 24px rgba(242, 140, 24, 0.18), 0 0 14px rgba(242, 140, 24, 0.12);
+  }
+}
+
+@keyframes secondary-shimmer-sweep {
   0% {
-    transform: scale(0.96);
-    opacity: 0.7;
+    transform: translateX(-150%) skewX(-25deg);
   }
-  70% {
-    transform: scale(1.08);
-    opacity: 0;
+  35%, 100% {
+    transform: translateX(250%) skewX(-25deg);
   }
-  100% {
-    transform: scale(1.08);
-    opacity: 0;
+}
+
+@keyframes sparkle-twinkle {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.9;
   }
+  25% {
+    transform: scale(1.25) rotate(15deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.9) rotate(-10deg);
+    opacity: 0.85;
+  }
+  75% {
+    transform: scale(1.2) rotate(10deg);
+    opacity: 1;
+  }
+}
+
+@keyframes tv-bounce {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+  }
+  25% {
+    transform: scale(1.18) translateY(-2px) rotate(-5deg);
+  }
+  50% {
+    transform: scale(1) translateY(0);
+  }
+  75% {
+    transform: scale(1.1) translateY(-1px) rotate(4deg);
+  }
+}
+
+@keyframes arrow-slide {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+/* Primary Button Animation Classes */
+.btn-primary-pulse {
+  animation: hero-primary-pulse 3s ease-in-out infinite;
+}
+
+.btn-primary-pulse:hover {
+  animation-play-state: paused;
+}
+
+.btn-shimmer-effect {
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-shimmer-effect::after {
@@ -153,7 +233,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 40%;
+  width: 50%;
   height: 100%;
   background: linear-gradient(
     90deg,
@@ -161,19 +241,53 @@
     rgba(255, 255, 255, 0.6) 50%,
     rgba(255, 255, 255, 0) 100%
   );
-  animation: shimmer-sweep 3s ease-in-out infinite;
-  pointer-events-none: none;
+  animation: shimmer-sweep 3.2s ease-in-out infinite;
+  pointer-events: none;
 }
 
-.btn-pulse-glow::before {
+/* Secondary Button Animation Classes */
+.btn-secondary-float {
+  position: relative;
+  overflow: hidden;
+  animation: hero-secondary-float 3.5s ease-in-out infinite;
+}
+
+.btn-secondary-float:hover {
+  animation-play-state: paused;
+}
+
+.btn-secondary-shimmer::after {
   content: "";
   position: absolute;
-  inset: -3px;
-  border-radius: 9999px;
-  border: 2px solid rgba(245, 158, 11, 0.6);
-  animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  pointer-events-none: none;
-  will-change: transform, opacity;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(242, 140, 24, 0) 0%,
+    rgba(242, 140, 24, 0.16) 50%,
+    rgba(242, 140, 24, 0) 100%
+  );
+  animation: secondary-shimmer-sweep 3.5s ease-in-out infinite;
+  animation-delay: 1.2s;
+  pointer-events: none;
+}
+
+/* Micro-icon animation classes */
+.animate-sparkle-twinkle {
+  animation: sparkle-twinkle 2.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+.animate-tv-bounce {
+  animation: tv-bounce 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+.animate-arrow-slide {
+  animation: arrow-slide 1.8s ease-in-out infinite;
+  display: inline-block;
 }
 
 /* Infinite Marquee Keyframe & Class */
@@ -197,4 +311,106 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* ==========================================================================
+   Pricing Cards Animations
+   ========================================================================== */
+
+/* Featured Card Continuous Ambient Glow */
+@keyframes featured-card-pulse {
+  0%, 100% {
+    border-color: #F28C18;
+    box-shadow: 0 12px 36px -5px rgba(242, 140, 24, 0.28), 0 0 20px rgba(242, 140, 24, 0.14);
+  }
+  50% {
+    border-color: #F7A034;
+    box-shadow: 0 18px 48px -4px rgba(242, 140, 24, 0.48), 0 0 32px 4px rgba(242, 140, 24, 0.26);
+  }
+}
+
+/* Most Popular Badge Gleam & Pulse */
+@keyframes badge-gleam-pulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    box-shadow: 0 4px 14px rgba(242, 140, 24, 0.35);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 8px 22px rgba(242, 140, 24, 0.65);
+  }
+}
+
+/* Shimmer Light Reflection Sweep on Card */
+@keyframes card-shimmer-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+/* Pricing Card Interactive Classes */
+.pricing-card-interactive {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s ease,
+              background-color 0.3s ease;
+  will-change: transform, box-shadow;
+}
+
+.pricing-card-interactive:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #F28C18 !important;
+  box-shadow: 0 22px 45px -6px rgba(242, 140, 24, 0.25), 0 8px 20px rgba(45, 30, 20, 0.08) !important;
+  z-index: 15;
+}
+
+/* Interactive light reflection sweep on hover */
+.pricing-card-interactive::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  transform: translateX(-150%) skewX(-25deg);
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.pricing-card-interactive:hover::after {
+  opacity: 1;
+  animation: card-shimmer-sweep 1.2s ease-in-out forwards;
+}
+
+/* Featured Card Special Ambient Animation */
+.pricing-card-featured {
+  animation: featured-card-pulse 3.5s ease-in-out infinite;
+}
+
+.pricing-card-featured:hover {
+  animation-play-state: paused;
+  transform: translateY(-10px) scale(1.07) !important;
+  border-color: #F28C18 !important;
+  box-shadow: 0 28px 58px -6px rgba(242, 140, 24, 0.52), 0 0 38px rgba(242, 140, 24, 0.32) !important;
+}
+
+/* Most Popular Floating Badge Animation */
+.animate-popular-badge {
+  animation: badge-gleam-pulse 3s ease-in-out infinite;
+}
+
+.animate-popular-badge:hover {
+  animation-play-state: paused;
 }

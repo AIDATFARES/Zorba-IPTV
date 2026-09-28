@@ -14,7 +14,7 @@ export default function WhatsAppButton() {
       <div className="relative flex items-center justify-center">
         <div className="absolute inset-0 rounded-full bg-[#25D366]/40 animate-ping" style={{ animationDuration: '3s' }}></div>
         <a
-          href="https://wa.me/447882781998?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20or%20ask%20a%20question%20about%20Smootv."
+          href="https://wa.me/447882781998?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20or%20ask%20a%20question%20about%20Zorba%20IPTV."
           target="_blank"
           rel="noreferrer"
           aria-label="Chat on WhatsApp"

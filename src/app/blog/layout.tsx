@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Smootv - IPTV Blog, Streaming Guides & Tech Tutorials (2026)",
+  title: "Zorba IPTV - IPTV Blog, Streaming Guides & Tech Tutorials (2026)",
   description:
-    "Stay ahead with Smootv tutorials, Firestick app reviews, Smart TV installation guides, internet speed tests & 4K streaming optimization tips.",
+    "Stay ahead with Zorba IPTV tutorials, Firestick app reviews, Smart TV installation guides, internet speed tests & 4K streaming optimization tips.",
   alternates: {
     canonical: "/blog",
   },

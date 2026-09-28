@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://www.smootv.top/sitemap.xml',
+    sitemap: 'https://www.zorba-iptv.store/sitemap.xml',
   };
 }

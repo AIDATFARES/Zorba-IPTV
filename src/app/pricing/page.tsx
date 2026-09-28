@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import PricingPageContent from "@/components/pricing/PricingPageContent";
 
 export const metadata: Metadata = {
-  title: "Smootv - Flexible IPTV Pricing Plans | Starting at $4.2/Month",
-  description: "Choose your Smootv subscription plan. Access 50,000+ live 4K channels, 200,000+ VODs, zero contracts & multi-device options. Instant activation within 3 minutes!",
+  title: "Zorba IPTV - Flexible IPTV Pricing Plans & Subscriptions | 4K & FHD",
+  description: "Choose your Zorba IPTV subscription plan. Access 50,000+ live 4K channels, 200,000+ VODs, zero contracts & multi-device options. Instant activation within 3 minutes!",
   alternates: {
     canonical: "/pricing",
   },
   openGraph: {
-    title: "Smootv - Flexible IPTV Pricing Plans | Starting at $4.2/Month",
-    description: "Choose your Smootv subscription plan. Access 50,000+ live 4K channels, 200,000+ VODs, zero contracts & multi-device options. Instant activation within 3 minutes!",
-    url: "https://www.smootv.top/pricing",
-    siteName: "Smootv",
+    title: "Zorba IPTV - Flexible IPTV Pricing Plans & Subscriptions | 4K & FHD",
+    description: "Choose your Zorba IPTV subscription plan. Access 50,000+ live 4K channels, 200,000+ VODs, zero contracts & multi-device options. Instant activation within 3 minutes!",
+    url: "https://www.zorba-iptv.store/pricing",
+    siteName: "Zorba IPTV",
     locale: "en_US",
     type: "website",
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   return (
-    <main className="flex-grow pt-4">
+    <main className="flex-grow pt-4 bg-[#F5F6F3]">
       <PricingPageContent />
     </main>
   );

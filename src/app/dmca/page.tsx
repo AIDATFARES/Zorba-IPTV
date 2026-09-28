@@ -2,11 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Smootv - DMCA Copyright Policy & Legal Disclaimer",
+  title: "Zorba IPTV - DMCA Copyright Policy & Legal Disclaimer",
   description:
-    "Official DMCA copyright guidelines, service disclaimer, and intellectual property notices for Smootv streaming platform.",
+    "Official DMCA copyright guidelines, service disclaimer, and intellectual property notices for Zorba IPTV streaming platform.",
   alternates: {
     canonical: "/dmca",
+  },
+  openGraph: {
+    title: "Zorba IPTV - DMCA Copyright Policy & Legal Disclaimer",
+    description:
+      "Official DMCA copyright guidelines, service disclaimer, and intellectual property notices for Zorba IPTV streaming platform.",
+    url: "https://www.zorba-iptv.store/dmca",
+    siteName: "Zorba IPTV",
+    locale: "en_US",
+    type: "website",
   },
 };
 
@@ -20,13 +29,13 @@ const sections = [
   {
     title: "Content Ownership and Hosting",
     content: [
-      "Smootv does not possess, manage, upload, store, or distribute copyrighted materials. All streams available via your account are sourced from external parties on the public internet. Mentions of channels, logos, or trademarks are solely for identification purposes and are owned by their respective entities.",
+      "Zorba IPTV does not possess, manage, upload, store, or distribute copyrighted materials. All streams available via your account are sourced from external parties on the public internet. Mentions of channels, logos, or trademarks are solely for identification purposes and are owned by their respective entities.",
     ],
   },
   {
     title: "Availability and Service Changes",
     content: [
-      <>Channel and VOD options may vary in availability, quality (including 4K/FHD/HD), features, plans, and <Link className="font-semibold text-amber-400 hover:underline" href="/pricing">pricing</Link>, and can be modified or removed by region without prior notification. We do not assure the availability of any particular <Link className="font-semibold text-amber-400 hover:underline" href="/channels">channel</Link>, event, or title.</>,
+      <>Channel and VOD options may vary in availability, quality (including 4K/FHD/HD), features, plans, and <Link className="font-semibold text-[#F28C18] hover:underline" href="/pricing">pricing</Link>, and can be modified or removed by region without prior notification. We do not assure the availability of any particular <Link className="font-semibold text-[#F28C18] hover:underline" href="/channels">channel</Link>, event, or title.</>,
     ],
   },
   {
@@ -50,73 +59,44 @@ const sections = [
   {
     title: "Limitation of Liability",
     content: [
-      "Smootv, its owners, affiliates, employees, and agents shall not be liable to the fullest extent permitted by law for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of data, profits, or goodwill connected to your use of the site or service.",
+      "Zorba IPTV, its owners, affiliates, employees, and agents shall not be liable to the fullest extent permitted by law for any indirect, incidental, special, exemplary, or punitive damages, or for loss of data, profits, or goodwill connected to your use of the site or service.",
     ],
   },
   {
     title: "Indemnification",
     content: [
-      "You agree to defend, indemnify, and shield Smootv from any claims, liabilities, damages, losses, and expenses (including reasonable attorney fees) related to your use of the service or any infringement of this disclaimer or applicable law.",
-    ],
-  },
-  {
-    title: "DMCA Takedown",
-    content: [
-      "In the event that you are a copyright owner or an agent and believe that content reachable through our service infringes your copyright, send a notice with the following information:",
-    ],
-    items: [
-      "Identification of the work claimed to be infringed.",
-      "Specify the exact location, like a URL or channel name, of the material you assert is infringing.",
-      "We need your name, organization (if relevant), address, phone number, and email.",
-      "You need to provide a statement affirming your honest belief that the disputed usage is not sanctioned by the copyright holder, their agent, or legal regulations.",
-      "A perjury-penalized statement indicating that the information in the notice is accurate and that you are either the copyright owner or are authorized to represent the owner's interests.",
-      "A valid copyright claim necessitates a physical or electronic signature from the owner or their representative.",
-    ],
-    after: "Submit DMCA notices: Access our Contact form. Valid notifications will be examined, and actions executed quickly.",
-  },
-  {
-    title: "Changes to This Disclaimer",
-    content: [
-      "This disclaimer might be updated from time to time. The 'Last updated' date above shows the most recent change. Continued use of this site or service after changes indicates your acceptance of the revised terms.",
+      "You agree to defend, indemnify, and shield Zorba IPTV from any claims, liabilities, damages, losses, and expenses (including reasonable attorney fees) related to your use of the service or any infringement of this disclaimer or applicable law.",
     ],
   },
 ];
 
 export default function DmcaPage() {
-  const currentDate = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-  
   return (
-    <main className="flex-grow px-5 pb-20 pt-28 sm:px-8">
-      <article className="mx-auto max-w-4xl">
-        <header className="border-b border-amber-500/10 pb-10 text-center mx-auto max-w-3xl">
-          <span className="inline-flex rounded-full border border-amber-500/25 bg-amber-500/10 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.15)]">Legal information</span>
+    <main className="flex-grow px-5 pb-20 pt-28 sm:px-8 text-format-legal bg-[#F5F6F3] text-[#171717] relative overflow-hidden">
+      {/* Ambient background glows */}
+      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#F28C18]/[0.06] blur-[120px] rounded-full" />
+      <div className="pointer-events-none absolute bottom-10 right-0 w-[500px] h-[300px] bg-[#F28C18]/[0.04] blur-[100px] rounded-full" />
+
+      <article className="mx-auto max-w-4xl relative z-10">
+        <header className="border-b border-[#E4E5E1] pb-10 text-center mx-auto max-w-3xl">
+          <span className="inline-flex rounded-full border border-[#F28C18]/20 bg-[#F28C18]/10 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#F28C18] shadow-[0_2px_12px_rgba(242,140,24,0.08)]">Legal Disclaimer</span>
           <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
-            <span className="block text-white">Legal Disclaimer</span>
-            <span className="mt-1 block bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent">&amp; DMCA Notice.</span>
+            <span className="block text-[#171717]">Terms of Use &amp; DMCA</span>
+            <span className="mt-1 block bg-gradient-to-r from-[#F28C18] via-[#E57E0E] to-[#F7A034] bg-clip-text text-transparent">Official Disclaimer</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#CBD5E1]">Last updated: {currentDate}</p>
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#626262]">Last adjusted: 2026</p>
         </header>
 
-        <div className="mt-10 space-y-10 text-base leading-7 text-[#CBD5E1]">
-          <div className="space-y-4">
-            <p>Content featured on this website is meant for general informational use and does not serve as legal advice. By engaging with our site or services, you agree to this disclaimer.</p>
-            <div className="rounded-xl border border-amber-500/25 bg-amber-500/10 p-5 text-sm text-[#CBD5E1]">
-              <strong className="text-white">Important:</strong> Smootv delivers an intuitive IPTV service interface alongside account provisioning. We do not host, upload, store, or archive any audiovisual content. The details on this site are provided &apos;as is&apos; for general guidance, not legal counsel.
-            </div>
-          </div>
-
-          {sections.map((section, index) => (
+        <div className="mt-10 space-y-10 text-base leading-7 text-[#626262]">
+          {sections.map((section) => (
             <section key={section.title}>
-              <h2 className="text-2xl font-bold text-white">{index + 1}. {section.title}</h2>
-              {section.content.map((paragraph, i) => <p className="mt-4" key={i}>{paragraph}</p>)}
-              {section.items && section.items.length > 0 && <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-amber-400">{section.items.map((item, i) => <li key={i}>{item}</li>)}</ul>}
-              {section.after && <p className="mt-4">{section.after}</p>}
+              <h2 className="text-2xl font-bold text-[#171717]">{section.title}</h2>
+              {section.content.map((paragraph, index) => <p className="mt-4" key={index}>{paragraph}</p>)}
             </section>
           ))}
-          
           <section>
-            <h2 className="text-2xl font-bold text-white">11. Contact</h2>
-            <p className="mt-4">For any inquiries, refer to our Terms of Service and <Link className="font-semibold text-amber-400 hover:underline" href="/privacy-policy">Privacy Policy</Link>, or contact <Link className="font-semibold text-amber-400 hover:underline" href="/contact">support</Link>.</p>
+            <h2 className="text-2xl font-bold text-[#171717]">DMCA Notice Submission</h2>
+            <p className="mt-4">If you believe your intellectual property rights have been affected, please submit a formal notice to our <Link className="font-semibold text-[#F28C18] hover:underline" href="/contact">compliance team</Link>.</p>
           </section>
         </div>
       </article>

@@ -2,11 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Smootv - Privacy Policy & Data Protection Standards",
+  title: "Zorba IPTV - Privacy Policy & Data Protection Standards",
   description:
-    "Read the official Smootv Privacy Policy. Learn how we securely protect user information, maintain account confidentiality, and uphold digital privacy standards.",
+    "Read the official Zorba IPTV Privacy Policy. Learn how we securely protect user information, maintain account confidentiality, and uphold digital privacy standards.",
   alternates: {
     canonical: "/privacy-policy",
+  },
+  openGraph: {
+    title: "Zorba IPTV - Privacy Policy & Data Protection Standards",
+    description:
+      "Read the official Zorba IPTV Privacy Policy. Learn how we securely protect user information, maintain account confidentiality, and uphold digital privacy standards.",
+    url: "https://www.zorba-iptv.store/privacy-policy",
+    siteName: "Zorba IPTV",
+    locale: "en_US",
+    type: "website",
   },
 };
 
@@ -14,7 +23,7 @@ const sections = [
   {
     title: "1. Data We Collect",
     content: [
-      <>We collect personal data that you voluntarily provide when you subscribe to our IPTV service, request information about our products or services, or <Link className="font-semibold text-amber-400 hover:underline" href="/contact">contact us</Link>. The personal data we collect may include the following:</>,
+      <>We collect personal data that you voluntarily provide when you subscribe to our IPTV service, request information about our products or services, or <Link className="font-semibold text-[#F28C18] hover:underline" href="/contact">contact us</Link>. The personal data we collect may include the following:</>,
     ],
     items: [
       "Contact information: Your email address, which we use for account creation and communication.",
@@ -70,7 +79,7 @@ const sections = [
       "Request erasure of your personal information in certain circumstances.",
       "Opt out of marketing and promotional communications at any time.",
     ],
-    after: <>To exercise any of these rights, please <Link className="font-semibold text-amber-400 hover:underline" href="/contact">contact our support team</Link>.</>,
+    after: <>To exercise any of these rights, please <Link className="font-semibold text-[#F28C18] hover:underline" href="/contact">contact our support team</Link>.</>,
   },
   {
     title: "9. Children's Privacy",
@@ -80,30 +89,34 @@ const sections = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="flex-grow px-5 pb-20 pt-28 sm:px-8 text-format-legal">
-      <article className="mx-auto max-w-4xl">
-        <header className="border-b border-amber-500/10 pb-10 text-center mx-auto max-w-3xl">
-          <span className="inline-flex rounded-full border border-amber-500/25 bg-amber-500/10 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.15)]">Legal information</span>
+    <main className="flex-grow px-5 pb-20 pt-28 sm:px-8 text-format-legal bg-[#F5F6F3] text-[#171717] relative overflow-hidden">
+      {/* Ambient background glows */}
+      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#F28C18]/[0.06] blur-[120px] rounded-full" />
+      <div className="pointer-events-none absolute bottom-10 right-0 w-[500px] h-[300px] bg-[#F28C18]/[0.04] blur-[100px] rounded-full" />
+
+      <article className="mx-auto max-w-4xl relative z-10">
+        <header className="border-b border-[#E4E5E1] pb-10 text-center mx-auto max-w-3xl">
+          <span className="inline-flex rounded-full border border-[#F28C18]/20 bg-[#F28C18]/10 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#F28C18] shadow-[0_2px_12px_rgba(242,140,24,0.08)]">Legal information</span>
           <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
-            <span className="block text-white">Privacy &amp; Data Protection</span>
-            <span className="mt-1 block bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent">Official Policy.</span>
+            <span className="block text-[#171717]">Privacy &amp; Data Protection</span>
+            <span className="mt-1 block bg-gradient-to-r from-[#F28C18] via-[#E57E0E] to-[#F7A034] bg-clip-text text-transparent">Official Policy</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#CBD5E1]">Last adjusted: September 14, 2025</p>
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-[#626262]">Last adjusted: 2026</p>
         </header>
 
-        <div className="mt-10 space-y-10 text-base leading-7 text-[#CBD5E1]">
-          <p>Welcome to Smootv. We are committed to protecting your personal information and respecting your privacy. If you have questions or concerns about this policy or our data practices, please <Link className="font-semibold text-amber-400 hover:underline" href="/contact">contact our support team</Link>.</p>
+        <div className="mt-10 space-y-10 text-base leading-7 text-[#626262]">
+          <p>Welcome to Zorba IPTV. We are committed to protecting your personal information and respecting your privacy. If you have questions or concerns about this policy or our data practices, please <Link className="font-semibold text-[#F28C18] hover:underline" href="/contact">contact our support team</Link>.</p>
           {sections.map((section) => (
             <section key={section.title}>
-              <h2 className="text-2xl font-bold text-white">{section.title}</h2>
+              <h2 className="text-2xl font-bold text-[#171717]">{section.title}</h2>
               {section.content.map((paragraph, index) => <p className="mt-4" key={index}>{paragraph}</p>)}
-              {section.items && <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-amber-400">{section.items.map((item, index) => <li key={index}>{item}</li>)}</ul>}
+              {section.items && <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-[#F28C18]">{section.items.map((item, index) => <li key={index}>{item}</li>)}</ul>}
               {section.after && <p className="mt-4">{section.after}</p>}
             </section>
           ))}
           <section>
-            <h2 className="text-2xl font-bold text-white">10. Contact Us</h2>
-            <p className="mt-4">If you would like to discuss this policy or our handling of your personal information, please contact our <Link className="font-semibold text-amber-400 hover:underline" href="/contact">support team</Link>.</p>
+            <h2 className="text-2xl font-bold text-[#171717]">10. Contact Us</h2>
+            <p className="mt-4">If you would like to discuss this policy or our handling of your personal information, please contact our <Link className="font-semibold text-[#F28C18] hover:underline" href="/contact">support team</Link>.</p>
           </section>
         </div>
       </article>
